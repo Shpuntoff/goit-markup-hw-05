@@ -138,7 +138,7 @@ header {
     border-radius: 2px;
     background-color: var(--accent-color);
     display: block;
-    bottom: 0;
+    bottom: -1px;
 }
 
 /* site main contacts  */
@@ -544,11 +544,12 @@ address {
     letter-spacing: 0.03em;
     text-transform: uppercase;  
     color: var(--main-white-text);
-    padding-top: 12px;
     margin-bottom: 20px;
 }
 .footer {
     display: flex;
+    flex-direction: row;
+    align-items: baseline;
 }
 .foter-soc.list {
     display: flex;
@@ -588,6 +589,7 @@ body {
     width: 100vw;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.2);
+    transition: opacity 250ms, visibility 250ms;
 }
 
 
@@ -610,9 +612,7 @@ body {
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
 }
-.is-hidden .modal {
-    transform: translate(0%, 0%);
-}
+
 .modal-close-bth {
     position: absolute;
     top: 8px;
@@ -625,6 +625,7 @@ body {
     border-radius: 50%;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
     
 }
 
